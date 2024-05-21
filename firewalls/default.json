@@ -1,1 +1,20 @@
-
+{
+  "meta": {
+    "name": "Default firewall configuration",
+    "description": "A default firewall configuration that exposes the ports 80 (HTTP) and 443 (HTTPS)."
+  },
+  "rules": [
+    {
+      "name": "expose http",
+      "port": 80,
+      "protocol": "tcp",
+      "action": "allow"
+    },
+    {
+      "name": "expose https",
+      "port": 443,
+      "protocol": "tcp",
+      "action": "allow"
+    }
+  ]
+}
