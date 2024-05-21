@@ -5,16 +5,18 @@
   },
   "rules": [
     {
-      "name": "expose http",
-      "port": 80,
-      "protocol": "tcp",
-      "action": "allow"
+      "name": "close everything",
+      "ports": "*",
+      "protocols": ["tcp", "udp"],
+      "action": "block",
+      "target": "*"
     },
     {
-      "name": "expose https",
-      "port": 443,
+      "name": "expose http & https",
+      "ports": [80, 443],
       "protocol": "tcp",
-      "action": "allow"
+      "action": "allow",
+      "target": "*"
     }
   ]
 }
